@@ -11,16 +11,17 @@ Usage
 
 ```hcl
 module "queue" {
-  source = "github.com/traveloka/terraform-aws-ssm-parameter?ref=master/modules/secret-store"
+  source  = "github.com/traveloka/terraform-aws-ssm-parameter//modules/secret-store"
+  version = "0.1.0"
 
-  secret_user  = "beitest"
+  secret_user  = "txtbook"
   secret_owner = "bei"
   secret_name  = "datadog/api.key"
 
   key_id = "6e392cb9-6e65-4c03-ad84-2bdbd6ef4967"
 
-  description    = "This is for testing purpose"
-  environment    = "special"
+  description    = "The API key for DataDog"
+  environment    = "production"
   product_domain = "bei"
 }
 ```

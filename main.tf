@@ -10,5 +10,6 @@ resource "aws_ssm_parameter" "parameter" {
     Environment   = "${var.environment}"
     Name          = "${var.name}"
     ProductDomain = "${var.product_domain}"
+    ManagedBy     = "Terraform"
   }
 }

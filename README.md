@@ -7,15 +7,16 @@ Usage
 
 ```hcl
 module "queue" {
-  source = "github.com/traveloka/terraform-aws-ssm-parameter?ref=master"
+  source  = "github.com/traveloka/terraform-aws-ssm-parameter"
+  version = "0.1.0"
 
-  name  = "string-parameter"
+  name  = "txtbook_db_username"
   type  = "String"
-  value = "abcde"
+  value = "postgres"
 
-  description    = "This is for testing purpose"
-  environment    = "special"
-  product_domain = "bei"
+  description    = "The username for txtbook-postgres db"
+  environment    = "production"
+  product_domain = "txt"
 }
 ```
 
